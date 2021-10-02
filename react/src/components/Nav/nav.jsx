@@ -1,16 +1,14 @@
 import React from "react";
-import { Fragment } from "react";
 import './Nav.css'
 
 function Nav (){
     return ( 
-        < Fragment>
-            Nueva app
-            <ul>
-                <li> tarea1</li>
-                <li> tarea2</li>
-            </ul>
-        </Fragment>
+        <div class="topnav">
+            <p >Usuarios </p>
+            <p >Proyectos</p>
+            <p >Profesores</p>
+            <p >Lideres</p>
+        </div>
     )
 } 
 
