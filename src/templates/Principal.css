@@ -1,0 +1,34 @@
+@import url('../index.css');
+
+header, footer{
+    background-color: var(--encabezado-color);
+    color: white;
+}
+
+nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.icono{
+    display: flex;
+}
+
+.icono img{
+    width: 50px;
+    height: 50px;
+    margin: 10px;
+}
+.icono h1{
+    align-self: center;
+    justify-content: right;
+    margin-left: 10px;
+}
+
+footer p{
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 40px;
+}

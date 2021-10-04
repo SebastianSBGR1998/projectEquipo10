@@ -1,0 +1,47 @@
+@import url('../../index.css');
+
+.projects{
+    display: flex;
+    background-color: white;
+}
+
+.projects aside{
+    width: 20vw;
+    padding: 50px;
+}
+.projects aside ul li{
+    margin-bottom: 30px;
+}
+
+.projects section{
+    width: 60vw;
+    padding: 50px;
+
+}
+
+.agregar-proyecto form{
+    display: flex;
+    flex-direction: column;
+    background-color: var(--fondo-color);
+    border-radius: 10px;
+    padding: 40px;
+    margin-top: 20px;
+    flex-wrap: wrap;
+}
+
+.agregar-proyecto form .descripcion{ 
+    height: 100px;
+}
+
+.agregar-proyecto form .fecha{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.agregar-proyecto form input[type="date"]{
+    width: 100%;
+}
+
+.agregar-proyecto form button{ 
+    align-self: center;
+}

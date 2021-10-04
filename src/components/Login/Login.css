@@ -1,9 +1,4 @@
-:root{
-    --back-color:#add3ff;
-    --boton-color:#ffce1f;
-    --dark-color:#2d2c2a;
-}
-
+@import url('../../index.css');
 
 .login{
     width: 50vw;  
