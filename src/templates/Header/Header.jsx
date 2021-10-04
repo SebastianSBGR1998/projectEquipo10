@@ -1,15 +1,17 @@
+import {Link} from 'react-router-3';
+
 export default function Header(){
     return(
         <header>
             <nav>
                 <div className="icono">
-                    <img src="./img/icono.svg" alt="" />
+                    <Link to="/"><img src="./img/icono.svg" alt="" /></Link>
                     <h1>InvestiApp</h1>
                 </div>
                 <ul>
-                    <li>Proyectos</li>
-                    <li>Lideres</li>
-                    <li>Estudiantes</li>
+                    <li><Link to="/projects">Proyectos</Link></li>
+                    <li><Link to="/leaders">Lideres</Link></li>
+                    <li><Link to="/students">Estudiantes</Link></li>
                 </ul>
                 <ul>
                     <li>Usuario</li>
