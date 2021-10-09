@@ -12,18 +12,23 @@ import org.springframework.data.mongodb.core.mapping.Document;
 public class User {
 
     @Id
-    private Long id;
-    private String name;
-    private String email;
+    private String id;
+    private String nick;
     private String password;
     private String role;
+    private String user;
+    private String email;
 
-    public User(Long id, String name, String email, String password, String role) {
-        this.id = id;
-        this.name = name;
-        this.email = email;
+
+    public User( String nick, String password, String role, String user , String email) {
+
+        this.nick = nick;
         this.password = password;
         this.role = role;
+        this.user = user;
+        this.email = email;
+
+
     }
 
     public User() {

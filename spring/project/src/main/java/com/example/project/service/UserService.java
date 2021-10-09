@@ -2,7 +2,6 @@ package com.example.project.service;
 
 import com.example.project.entity.User;
 import com.example.project.repository.IUserRepository;
-import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
@@ -26,26 +25,6 @@ public class UserService {
 
     public List<User> listarUsers(){
         return userRepository.findAll();
-    }
-
-    public User actualizarUser(User user){
-        if (userRepository.findById(user.getId()).isPresent()){
-
-            User userParcial = userRepository.findById(user.getId()).get();
-            userParcial.setName(user.getName());
-            userParcial.setEmail(user.getEmail());
-            userParcial.setPassword(user.getPassword());
-            userParcial.setRole(user.getRole());
-
-            return userRepository.save(user);
-
-        }else {
-            return null;
-        }
-    }
-
-    public void eliminarUser(Long id){
-        userRepository.deleteById(id);
     }
 
 }
