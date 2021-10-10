@@ -12,7 +12,7 @@ import org.springframework.data.mongodb.core.mapping.Document;
 public class Projects {
 
     @Id
-    private String id;
+    private Long id;
     private String name;
     private String description;
     private int budget;
@@ -25,7 +25,8 @@ public class Projects {
     private String[] advances;
 
 
-    public Projects (String name, String description, int budget, String dinit, String dfin, String[] leaders, String[] students, Boolean active, String status, String[] advances) {
+    public Projects ( Long id ,String name, String description, int budget, String dinit, String dfin, String[] leaders, String[] students, Boolean active, String status, String[] advances) {
+        this.id = id;
         this.name = name;
         this.description = description;
         this.budget = budget;

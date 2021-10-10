@@ -9,4 +9,5 @@ import java.util.List;
 @Repository
 public interface IUserRepository extends MongoRepository<User, Long> {
     List<User> findAllByEmail(String email);
+
 }

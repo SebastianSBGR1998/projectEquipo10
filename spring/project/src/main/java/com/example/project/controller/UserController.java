@@ -30,5 +30,16 @@ public class UserController {
         return userService.listarUsers();
     }
 
+    @PutMapping("/actualizar")
+    public User actualizarUsuario(@RequestBody User user){
+        return userService.actualizarUser(user);
+    }
+
+    @DeleteMapping("/eliminar/{id}")
+    public void eliminarUsuario(@PathVariable Long id){
+        userService.eliminarUser(id);
+    }
+
+
 
 }

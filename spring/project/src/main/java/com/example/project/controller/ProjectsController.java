@@ -1,6 +1,7 @@
 package com.example.project.controller;
 
 import com.example.project.entity.Projects;
+import com.example.project.entity.User;
 import com.example.project.service.ProjectsService;
 import org.springframework.web.bind.annotation.*;
 
@@ -30,5 +31,15 @@ public class ProjectsController {
         return projectsService.listarProjects();
     }
 
+    @PutMapping("/actualizar")
+    public Projects actualizarProject(@RequestBody Projects projects){
+        return projectsService.actualizarProjects(projects);
+    }
+
+    @DeleteMapping("/eliminar/{id}")
+    public void eliminarProjecy(@PathVariable Long id){
+        projectsService.
+                eliminarProject(id);
+    }
 
 }

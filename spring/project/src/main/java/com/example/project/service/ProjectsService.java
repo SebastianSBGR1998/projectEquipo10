@@ -1,6 +1,7 @@
 package com.example.project.service;
 
 import com.example.project.entity.Projects;
+import com.example.project.entity.User;
 import com.example.project.repository.IProjectsRepository;
 import org.springframework.stereotype.Service;
 
@@ -27,4 +28,29 @@ public class ProjectsService {
         return projectsRepository.findAll();
     }
 
+    public Projects actualizarProjects(Projects projects){
+        if (projectsRepository.findById(projects.getId()).isPresent()){
+
+            Projects userParcial = projectsRepository.findById(projects.getId()).get();
+            userParcial.setName(projects.getName());
+            userParcial.setDescription(projects.getDescription());
+            userParcial.setBudget(projects.getBudget());
+            userParcial.setDinit(projects.getDinit());
+            userParcial.setDfin(projects.getDfin());
+            userParcial.setLeaders(projects.getLeaders());
+            userParcial.setStudents(projects.getStudents());
+            userParcial.setActive(projects.getActive());
+            userParcial.setStatus(projects.getStatus());
+            userParcial.setAdvances(projects.getAdvances());
+
+            return projectsRepository.save(projects);
+
+        }else {
+            return null;
+        }
+    }
+
+    public void eliminarProject(Long id){
+        projectsRepository.deleteById(id);
+    }
 }
