@@ -1,12 +1,13 @@
-import Nav from "../Nav/Nav"
-import Logo from "../Logo/Logo"
-import Login from "../Login/Login"
+import Nav from "./Nav/Nav"
+import Portada from "./Portada/Portada"
+import Login from "./Login/Login"
+import './Inicio.css'
 export default function Inicio(){
     return(
         <>
             <Nav/>
             <div className="inicio">
-                <Logo/>
+                <Portada/>
                 <Login/>
             </div>
         </>

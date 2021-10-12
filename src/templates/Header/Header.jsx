@@ -3,15 +3,15 @@ import {Link} from 'react-router-3';
 export default function Header(){
     return(
         <header>
-            <nav>
+            <nav className="menu">
                 <div className="icono">
                     <Link to="/"><img src="./img/icono.svg" alt="" /></Link>
                     <h1>InvestiApp</h1>
                 </div>
                 <ul>
-                    <li><Link to="/projects">Proyectos</Link></li>
-                    <li><Link to="/leaders">Lideres</Link></li>
-                    <li><Link to="/students">Estudiantes</Link></li>
+                    <li><Link className="link" to="/projects">Proyectos</Link></li>
+                    <li><Link className="link" to="/leaders">Lideres</Link></li>
+                    <li><Link className="link" to="/students">Estudiantes</Link></li>
                 </ul>
                 <ul>
                     <li>Usuario</li>

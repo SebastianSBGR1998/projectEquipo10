@@ -5,7 +5,3 @@
     justify-content:space-around;
     background-color: var(--fondo-color);
 }
-
-.inicio{
-    display: flex;
-}

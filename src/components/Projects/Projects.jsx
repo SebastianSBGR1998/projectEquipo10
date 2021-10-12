@@ -1,17 +1,9 @@
-import './Projects.css'
+import '../Projects/Projects.css'
 export default function Projects(){
     return(
         <>
-            <div className="projects">
-                <aside>
-                    <ul>
-                        <li>Nuevo</li>
-                        <li>Buscar</li>
-                        <li>Avances</li>
-                    </ul>
-                </aside>
-                <section>
-                    <article className="agregar-proyecto">
+            
+                   <article className="agregar-proyecto">
                         <p>Agregar nuevo proyecto</p>
                         <form action="">
                             <label htmlFor="titulo">Titulo:</label>
@@ -31,17 +23,35 @@ export default function Projects(){
                                 </div>
                             </div>
                             
-
                             <label htmlFor="presupuesto">Presupuesto:</label>
                             <input className="presupuesto" type="number" placeholder="  $"/>
 
                             <button>Enviar</button>
                         </form>
                     </article>
+                    <article className="editar-proyecto">
+                        <p>Proyectos registrados</p>
+                        <form className="buscar" action="">
+                            <input type="text" placeholder="Nombre del proyecto"/><button >Buscar</button>
+                        </form>
+                        <ul>
+                            <li className="proyectos">
+                                <p>Administracion de recursos</p>
+                                <div>
+                                    <i class="far fa-edit"></i>
+                                    <i class="far fa-trash-alt"></i>
+                                </div>
+                            </li>
+                            <li className="proyectos">
+                                <p>Energias renovables</p>
+                                <div>
+                                    <i class="far fa-edit"></i>
+                                    <i class="far fa-trash-alt"></i>
+                                </div>
+                            </li>
 
-
-                </section>
-            </div>
+                        </ul>
+                    </article>
         </>
     )
 }

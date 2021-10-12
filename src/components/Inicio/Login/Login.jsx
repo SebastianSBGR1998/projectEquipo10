@@ -1,4 +1,4 @@
-import './Login.css'
+import '../Inicio.css'
 
 export default function Login(){
     return(
@@ -10,12 +10,12 @@ export default function Login(){
                 </div>
                 
                 <label htmlFor="usuario">Usuario:</label>
-                <input className="usuario" type="text" placeholder="   Ingrese su usuario"/>
+                <input className="usuario" type="text" placeholder="Ingrese su usuario"/>
                 <label htmlFor="password">Contraseña:</label>
-                <input className="password" type="password" placeholder="   Ingrese su contraseña"/>
+                <input className="password" type="password" placeholder="Ingrese su contraseña"/>
 
                 <div>
-                    <button>Entrar</button>
+                    <button className="enviar">Entrar</button>
                     <a href="#">Olvide mi contraseña</a>
                 </div>
                 
