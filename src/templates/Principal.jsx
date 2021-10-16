@@ -5,8 +5,6 @@ import './Principal.css'
 
 export default function Principal(props){
 
-
-
     return(
         <>
             <Header/>

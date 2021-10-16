@@ -1,6 +1,20 @@
-import '../Inicio.css'
+import '../Inicio.css';
+
+import {useEffect } from "react"
 
 export default function Login(){
+
+
+      /*fetch('http://localhost:8080/users/buscar/Pedri')
+      .then((response)=>{
+           return response.json()
+      })
+      .then((data)=>{
+            console.log(data);
+      })*/
+            
+    
+
     return(
         <div className="login">
             <form className="ingresar">
@@ -15,7 +29,7 @@ export default function Login(){
                 <input className="password" type="password" placeholder="Ingrese su contraseña"/>
 
                 <div>
-                    <button className="enviar">Entrar</button>
+                    <button className="enviar" type="submit">Entrar</button>
                     <a href="#">Olvide mi contraseña</a>
                 </div>
                 

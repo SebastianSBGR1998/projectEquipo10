@@ -35,9 +35,9 @@
 }
 
 /*-------------*/
-.editar-proyecto{
+/*.editar-proyecto{
     display: none;
-}
+}*/
 
 .editar-proyecto form.buscar{
     display: flex;
