@@ -1,0 +1,50 @@
+[33mcommit 329a4725bccf20ccb59be465615b459902cea56f[m[33m ([m[1;36mHEAD -> [m[1;32mmain[m[33m, [m[1;31morigin/main[m[33m, [m[1;31morigin/HEAD[m[33m)[m
+Author: unknown <sebastianamezquitaleon@gmail.com>
+Date:   Sun Oct 10 17:57:13 2021 +0100
+
+    Agregar Put
+
+[33mcommit aace6349a8dee6e3617845b582b3bd9277346b1f[m
+Author: unknown <sebastianamezquitaleon@gmail.com>
+Date:   Sun Oct 10 00:55:45 2021 +0100
+
+    Cambio en Spring boot
+
+[33mcommit 219e994f4d946c6711d2d931e1c323ec78534d6e[m[33m ([m[1;32mspring[m[33m)[m
+Author: unknown <sebastianamezquitaleon@gmail.com>
+Date:   Sat Oct 9 14:40:01 2021 +0100
+
+    cambios
+
+[33mcommit 822f46a949d605eefb9a0c43e8dff54be3ca1cf9[m
+Merge: 7db4eec9 c62faa3b
+Author: MarcelaLeon <81272380+MarcelaLeon@users.noreply.github.com>
+Date:   Fri Oct 8 22:29:04 2021 -0500
+
+    Merge pull request #1 from SebastianSBGR1998/marcela
+    
+    Marcela
+
+[33mcommit c62faa3b0c29fb45ea85dccd3afa0243e8bbf2aa[m[33m ([m[1;31morigin/marcela[m[33m)[m
+Author: MarcelaLeon <you@example.com>
+Date:   Fri Oct 8 22:18:33 2021 -0500
+
+    [ADD] endpoints con springboot
+
+[33mcommit d47822b12f399946ba9655d78613c8302d637a3c[m
+Author: MarcelaLeon <you@example.com>
+Date:   Wed Sep 29 18:06:33 2021 -0500
+
+    [ADD] prueba
+
+[33mcommit 7db4eec93120d7a56d72e2f21097a0ca897e7bbe[m
+Author: unknown <sebastianamezquitaleon@gmail.com>
+Date:   Wed Sep 29 20:04:24 2021 +0100
+
+    Subiendo archivos
+
+[33mcommit 3f525816b2e01795a6bb1ce0f6deca4a05d16d33[m
+Author: SebastianSBGR1998 <sebastianamezquitaleon@gmail.com>
+Date:   Wed Sep 29 19:53:14 2021 +0100
+
+    Initial commit
