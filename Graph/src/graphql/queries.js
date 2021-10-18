@@ -1,5 +1,5 @@
 const graphql = require('graphql');
-const { GraphQLObjectType, GraphQLID, GraphQLList } = graphql;
+const { GraphQLNonNull,GraphQLObjectType, GraphQLID, GraphQLList, GraphQLString} = graphql;
 
 const isTokenValid = require('../helper/validate');
 
@@ -37,6 +37,41 @@ const RootQuery = new GraphQLObjectType({
         return Project.findById(args.id);
       }
     },
+    userId: {
+      type: UserType,
+      args: {
+        id: {
+          type: GraphQLID
+        }
+      },
+      async resolve(parent, args) {
+        return User.findById(args.id);
+      }
+    },
+
+    userProjects: {
+      type: UserType,
+      args: {
+        name : {
+          type: new GraphQLNonNull(GraphQLString)
+        }
+      },
+      async resolve(parent, args,) {
+        let user = new User({
+          name: args.name,
+        });
+        return User.findOne({"name" : args.name})
+      /*type: UserType,
+      args: {
+        name: {
+          type: GraphQLID
+        }
+      },
+      async resolve(parent, args) {
+        return User.findOne({"name" : args.name});
+      }*/
+    }},
+
     projects: {
       type: new GraphQLList(ProjectType),
       async resolve(parent, args, info) {

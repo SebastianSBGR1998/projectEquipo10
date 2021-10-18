@@ -5,6 +5,8 @@ const projectSchema = new Schema({
   name: { type: String, required: true },
   description: { type: String, required: true },
   budget: { type: String, required: true },
+  userId: { type: String, required: true },
+  
 });
 
 const Project = mongoose.model('Proyect', projectSchema)

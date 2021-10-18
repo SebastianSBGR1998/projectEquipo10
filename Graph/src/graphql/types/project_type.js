@@ -18,12 +18,9 @@ const ProjectType = new GraphQLObjectType({
     budget: {
       type: GraphQLString
     },
-    /*user: {
-      type: UserType,
-      resolve(parent, args) {
-        return User.findById( parent.userId )
-      }
-    }*/
+    userId: {
+      type: GraphQLString
+    }
   })
 });
 
