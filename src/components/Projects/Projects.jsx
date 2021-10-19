@@ -1,8 +1,24 @@
+import { useQuery } from '@apollo/client'
+import { GET_PROJECTS } from '../../graphql/projects'
 import '../Projects/Projects.css'
 export default function Projects(props){
 
     console.log(props.vista)
 
+    const {loading ,data} = useQuery(GET_PROJECTS);
+
+    function renderProjects (){
+        return data.projects.map((proj) =>{
+            return <li className="proyectos">
+            <p>{proj.name}</p>
+            <div>
+                <i class="far fa-edit"></i>
+                <i class="far fa-trash-alt"></i>
+            </div>
+        </li>
+        })
+        
+    }
 
 if (props.vista=="nuevo"){
     return(
@@ -47,36 +63,27 @@ if (props.vista=="nuevo"){
 }else if(props.vista=="buscar"){
     return(
         <>
-            <article className="buscar-proyecto">
-                <p>Vista en proceso...</p>        
-            </article>
+        { loading ? <p>cargando...</p>: <article className="editar-proyecto">                            
+        <p>Proyectos registrados</p>
+        <form className="buscar" action="">
+            <input type="text" placeholder="Nombre del proyecto"/><button >Buscar</button>
+        </form>
+        <ul>
+            {renderProjects()}
+            
+        </ul>                          
+    </article>}
+            
         </>
+
+        
     )
 }
 else{
     return(
         <>
-            <article className="editar-proyecto">                            
-                <p>Proyectos registrados</p>
-                <form className="buscar" action="">
-                    <input type="text" placeholder="Nombre del proyecto"/><button >Buscar</button>
-                </form>
-                <ul>
-                    <li className="proyectos">
-                        <p>Administracion de recursos</p>
-                        <div>
-                            <i class="far fa-edit"></i>
-                            <i class="far fa-trash-alt"></i>
-                        </div>
-                    </li>
-                    <li className="proyectos">
-                        <p>Energias renovables</p>
-                        <div>
-                            <i class="far fa-edit"></i>
-                            <i class="far fa-trash-alt"></i>
-                        </div>
-                    </li>
-                </ul>                          
+            <article className="buscar-proyecto">
+                <p>Vista en proceso...</p>        
             </article>
         </>
         )
