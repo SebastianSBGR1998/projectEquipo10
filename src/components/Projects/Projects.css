@@ -39,7 +39,7 @@
     display: none;
 }*/
 
-.editar-proyecto form.buscar{
+.buscar-proyecto form.buscar{
     display: flex;
     flex-direction: row;
     background-color: var(--fondo-color);

@@ -8,3 +8,13 @@ query{
       }
 }
 `;
+
+export const GET_PROJECTS_NAME = gql `
+query($name: String){
+    projectName(name: $name){
+     id
+     name
+   }
+   
+}
+`;
