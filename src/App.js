@@ -16,7 +16,6 @@ function App() {
       <Route path="/" component={Inicio}/>
       <Route path="/" component={Principal}>
           <Route path="/projects" component={Projects}/>
-          <Route path="/leaders" component={Leaders}/>
           <Route path="/students" component={Students}/>
           <IndexRoute component={Projects}/>
         </Route>

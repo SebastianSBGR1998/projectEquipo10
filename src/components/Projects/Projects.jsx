@@ -1,11 +1,24 @@
 import { useQuery } from '@apollo/client'
-import { GET_PROJECTS } from '../../graphql/projects'
+import { useLazyQuery} from '@apollo/client'
+import { GET_PROJECTS } from '../../graphql/projects';
+import { GET_PROJECTS_NAME } from '../../graphql/projects';
+import { useState } from 'react';
 import '../Projects/Projects.css'
 export default function Projects(props){
+
+    const [inputBuscar, setInputBuscar] = useState('');
 
     console.log(props.vista)
 
     const {loading ,data} = useQuery(GET_PROJECTS);
+
+    const [getData] = useLazyQuery(GET_PROJECTS_NAME,{
+        variables:{name:inputBuscar},
+        onCompleted({projectName}){
+            console.log(projectName);
+
+        }
+    });
 
     function renderProjects (){
         return data.projects.map((proj) =>{
@@ -62,19 +75,21 @@ if (props.vista=="nuevo"){
     )  
 }else if(props.vista=="buscar"){
     return(
-        <>
-        { loading ? <p>cargando...</p>: <article className="editar-proyecto">                            
-        <p>Proyectos registrados</p>
-        <form className="buscar" action="">
-            <input type="text" placeholder="Nombre del proyecto"/><button >Buscar</button>
-        </form>
-        <ul>
-            {renderProjects()}
-            
-        </ul>                          
-    </article>}
-            
-        </>
+        <>  
+            <article className="buscar-proyecto">                            
+                <p>Proyectos registrados</p>
+                <form className="buscar" action="">
+                    <input value={inputBuscar} onInput={e => {setInputBuscar(e.target.value)
+                        e.preventDefault}} type="text" placeholder="Nombre del proyecto"/>
+                    <button onClick={()=>getData()}>Buscar</button>
+                </form>
+                { loading ? <p>cargando...</p>:
+                <ul>
+                    {renderProjects()} 
+                </ul> }                         
+            </article>
+
+        </>   
 
         
     )
