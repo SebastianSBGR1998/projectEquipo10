@@ -30,11 +30,15 @@ export const DELETE_USER = gql`
   }
   `;
 
-  export const GET_PROJECTS_NAME = gql `
-  query($name: String){
-      projectName(name: $name){
-       id
-       name
-     }
-     
-  }`; 
+
+
+export const GET_PROJECTS_NAME = gql `
+query($name: String){
+    projectName(name: $name){
+     id
+     name
+   }
+   
+}
+`;
+
